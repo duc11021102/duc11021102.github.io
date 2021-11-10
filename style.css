@@ -1,0 +1,439 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Ceviche+One&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+} 
+nav{
+  display: flex;
+  height: 80px;
+  width: 100%;
+  background: #1b1b1b;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 50px 0 100px;
+  flex-wrap: wrap;
+  z-index: 100;
+  position:fixed;
+  
+}
+nav .logo{
+  
+  color: #fff;
+  font-size: 50px;
+  font-weight: 600;
+  font-family: 'Ceviche One', cursive;
+  z-index: 100;
+}
+nav ul{
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  z-index: 100;
+  position: absolute;
+  top: 23px;
+  right: 0px;
+}
+nav ul li{
+  margin: 0 5px;
+  z-index: 100;
+}
+nav ul li a{
+  color: #f2f2f2;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 8px 15px;
+  border-radius: 5px;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+  z-index: 100;
+  
+}
+nav ul li a.active,
+nav ul li a:hover{
+  color: #111;
+  background: #fff;
+  z-index: 100;
+  text-decoration: none;
+}
+nav .menu-btn i{
+  color: #fff;
+  font-size: 22px;
+  cursor: pointer;
+  display: none;
+  z-index: 100;
+}
+input[type="checkbox"]{
+  display: none;
+}
+.banner{
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    padding: 20px 100px;
+    background: url(ocean2.jpg);
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    z-index: 1;
+}
+@media (max-width: 1000px){
+  nav{
+    padding: 0 40px 0 50px;
+    z-index: 100;
+  }
+}
+@media (max-width: 920px) {
+  nav .menu-btn i{
+    display: block;
+  }
+  #click:checked ~ .menu-btn i:before{
+    content: "\f00d";
+  }
+nav ul{
+    position: fixed;
+    top: 80px;
+    left: -100%;
+    background: #111;
+    height: 100vh;
+    width: 100%;
+    text-align: center;
+    display: block;
+    transition: all 0.3s ease;
+  }
+  #click:checked ~ ul{
+    left: 0;
+  }
+  nav ul li{
+    width: 100%;
+    margin: 40px 0;
+  }
+  nav ul li a{
+    width: 100%;
+    margin-left: -100%;
+    display: block;
+    font-size: 20px;
+    transition: 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+  #click:checked ~ ul li a{
+    margin-left: 0px;
+  }
+  nav ul li a.active,
+  nav ul li a:hover{
+    background: none;
+    color: cyan;
+  }
+}
+.content{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: -1;
+  width: 100%;
+  padding: 0 30px;
+  color: #1b1b1b;
+}
+.content div{
+  font-size: 40px;
+  font-weight: 700;
+}
+
+.content{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  padding: 0 20px;
+  text-align: center;
+}
+.content .title{
+  color: #111;
+  font-size: 55px;
+  font-weight: 1000;
+  z-index: 10;
+  margin: 50px;
+  
+}
+.content .sub_title{
+  color: #111;
+  font-size: 42px;
+  font-weight: 300;
+  font-style: italic;
+  opacity: 0.8;
+
+}
+.content .btns{
+  margin-top: 20px;
+}
+.content .btns button {
+  height: 55px;
+  width: 170px;
+  border-radius: 5px;
+  border: none;
+  margin: 0 10px;
+  border: 2px solid white;
+  font-size: 20px;
+  font-weight: 500;
+  padding: 0 10px;
+  cursor: pointer;
+  outline: none;
+  transition: all 0.3s ease;
+}
+.content .btns button a {
+  text-decoration: none;
+  color: #111;
+}
+.content .btns button:first-child{
+  color: #fff;
+  background: none;
+}
+.btns button:first-child:hover{
+  background: white;
+  color: black;
+}
+.content .btns button:last-child{
+  background: none;
+  color: black;
+}
+.btns button:last-child:hover{
+  background: white;
+  color: black;
+}
+footer {
+  font-weight: 300;
+  display: flex;
+  justify-content: space-evenly;
+  padding: 2rem;
+  background: var(--main-gray);
+  border-top: 4px solid var(--main-red);
+}
+footer .primary-button {
+  margin-bottom: 30px;
+  text-align: center;
+}
+footer .primary-button a {
+  text-decoration: none;
+  color: #111;
+  font-size: 50px;
+  font-weight: 600;
+  font-family:'Ceviche One', cursive;
+
+}
+
+footer > p {
+  margin: 2rem;
+  font-size: 20px;
+  font-weight: 300;
+}
+footer > p > a{
+  text-decoration: none;
+  color: red;
+}
+@media (max-width: 28.75em) {
+  footer {
+    flex-direction: column;
+    text-align: center;
+  }
+  footer > p {
+    font-size: 14px;
+  }
+  footer .primary-button a {
+    font-size: 15px;
+  }
+}
+@media (max-width: 28.75em) {
+  .banner {
+    flex-direction: column;
+    text-align: center;
+  }
+  .content .title {
+    font-size: 25px;
+  }
+  .content .sub_title {
+    font-size: 15px;
+  }
+  .content .btns button {
+    height: 30px;
+    width: 140px;
+}
+  nav .logo {
+    font-size: 30px;
+  }
+}
+
+
+
+.service-content {
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 15vh;
+  background-image: url(/ocean10.jpg);
+  background-attachment: fixed;
+  min-height: 80vh;
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  
+  
+}
+
+.service-content .left-text h4 {
+  font-size: 40px;
+  font-weight: 1000;
+  color: #111;
+}
+
+h4, .h4 {
+  font-size: 30px;
+}
+
+.service-content .left-text .line-dec {
+  width: 45px;
+  height: 3px;
+  background-color: #111;
+  margin: 20px auto 20px auto;
+  text-align: center;
+  
+}
+
+.service-content .left-text p {
+  color: #111;
+  font-size: 20px;
+  font-style: italic;
+}
+.service-content .left-text p a {
+  color: red;
+}
+
+
+.service-content .left-text .primary-button {
+  margin: 30px 0px;
+}
+.service-content .left-text .primary-button a {
+  color: red;
+}
+
+.service-content .service-item {
+  background-color: rgba(253, 252, 252, 0.5);
+  padding: 25px 30px;
+  text-align: center;
+  color: #111;
+  margin-bottom: 30px;
+}
+
+.service-content .service-item .line-dec {
+  width: 45px;
+  height: 3px;
+  background-color: #111;
+  margin: 20px auto 15px auto;
+}
+
+@media (max-width: 767px){
+  .service-content {
+    padding-top: 5vh;
+    text-align: center;
+  }
+
+  .service-content .left-text .line-dec {
+    width: 45px;
+    height: 3px;
+    background-color: #111;
+    margin: 20px auto 20px auto;
+  }
+
+  .service-content .service-item {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 25px 30px;
+    text-align: center;
+    color: #fff;
+    margin-bottom: 30px;
+  }
+}
+
+/* contact */
+.title-contact {
+  font-size: 30px;
+  text-align: center;
+  font-weight: 900;
+  color: #fff;
+}
+@media (max-width: 767px) {
+  .title-contact {
+    font-size: 15px;
+  }
+}
+
+.contact-content {
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 16vh;
+  background-image: url(/ocean3.jpg);
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+}
+
+.contact-form {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 30px 25px;
+  margin-bottom: 30px;
+}
+
+
+#contact input {
+  border-radius: 3px;
+  padding-left: 15px;
+  font-size: 13px;
+  color: #232323;
+  background-color: rgb(250, 250, 250);
+  outline: none;
+  border: none;
+  box-shadow: none;
+  line-height: 50px;
+  height: 50px;
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+#contact textarea {
+  border-radius: 3px;
+  padding-left: 15px;
+  padding-top: 10px;
+  font-size: 13px;
+  color: #232323;
+  background-color: rgb(255, 255, 255);
+  outline: none;
+  border: none;
+  box-shadow: none;
+  height: 165px;
+  max-height: 220px;
+  width: 100%;
+  margin-bottom: 25px;
+}
+
+#contact button {
+  display: inline-block;
+  background-color: #4189cc;
+  padding: 15px 24px;
+  width: 100%;
+  border-radius: 3px;
+  text-transform: uppercase;
+  font-size: 11px;
+  color: #fff;
+  font-weight: 700;
+  text-decoration: none;
+  letter-spacing: 0.5px;
+}
+
+
+  
